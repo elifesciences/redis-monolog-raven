@@ -11,10 +11,10 @@ blocking read from Redis, sending what it receives to Raven.
 Assumes PHP and Composer are installed.
 
 ```bash
-# apt-get install redis-server # Ubuntu
-$ git clone https://github.com/elifesciences/redis-monolog-raven
-$ cd redis-monolog-raven
-$ composer install
+sudo apt-get install redis-server # Ubuntu
+git clone https://github.com/elifesciences/redis-monolog-raven
+cd redis-monolog-raven
+composer install
 ```
 
 ## usage
@@ -25,13 +25,13 @@ called `RAVEN_DSN`. How it makes it into the environment is up to you.
 The script that listen to Redis for input can be called like this:
 
 ```bash
-$ php listener.php RAVEN_DSN=https://public:private@app.getsentry.com/12345
+php listener.php RAVEN_DSN=https://public:private@app.getsentry.com/12345
 ```
     
 The example script that does the logging can be called like:
 
 ```bash
-$ php logging.php
+php logging.php
 ```
 
 ## Copyright & Licence
