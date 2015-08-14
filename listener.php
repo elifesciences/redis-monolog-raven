@@ -24,7 +24,7 @@ require('vendor/autoload.php');
 
 # where does Raven send this stuff we're giving it?
 # looks like: "https://public:private@popular.loganalyser.com/what/ever/"
-define("RAVEN_DSN", null);
+define("RAVEN_DSN", genenv("RAVEN_DSN"));
 # Redis List key we monitor for changes, same one we log to
 define("QUEUE_NAME", "log_messages");
 define("TIMEOUT", 10); // seconds
